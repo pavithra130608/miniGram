@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/miniGram/static/css/main.65b1c822.css",
+    "main.js": "/miniGram/static/js/main.f9cf4c47.js",
+    "static/js/453.a97d9074.chunk.js": "/miniGram/static/js/453.a97d9074.chunk.js",
+    "index.html": "/miniGram/index.html",
+    "main.65b1c822.css.map": "/miniGram/static/css/main.65b1c822.css.map",
+    "main.f9cf4c47.js.map": "/miniGram/static/js/main.f9cf4c47.js.map",
+    "453.a97d9074.chunk.js.map": "/miniGram/static/js/453.a97d9074.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65b1c822.css",
+    "static/js/main.f9cf4c47.js"
+  ]
+}

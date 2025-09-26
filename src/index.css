@@ -1,13 +1,118 @@
 body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #fafafa;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3498db;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.post-form textarea,
+.post-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.post-form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.post {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-image img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.caption {
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.comment {
+  margin: 5px 0;
+  padding-left: 10px;
+  border-left: 2px solid #ddd;
+}
+
+.comment-form {
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 6px;
+}
+
+.comment-form button {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+.feed {
+  width: 100%;
+  max-width: 400px;  /* restrict width to phone size */
+}
+
+/* Post style */
+.post {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* Image fit */
+.post-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
 }

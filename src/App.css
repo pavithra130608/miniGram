@@ -1,11 +1,15 @@
 /* Global */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
+  
+  /* Background gradient + image */
+  background: linear-gradient(135deg, rgba(253,251,251,0.8), rgba(235,237,238,0.8)),
+              url('https://png.pngtree.com/thumb_back/fh260/background/20231229/pngtree-technological-gradient-texture-a-stunning-visual-for-instagram-stories-image_13907159.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .app {

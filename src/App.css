@@ -1,6 +1,7 @@
+/* Global */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5; /* light gray background */
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,75 +11,87 @@ body {
 .app {
   width: 100%;
   max-width: 500px;
-  padding: 10px;
+  padding: 15px;
 }
 
+/* Headings */
 h1 {
   text-align: center;
-  color: #333; /* dark text for contrast */
+  font-size: 26px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515BD4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
 }
 
+/* Post Form */
 .post-form {
-  background: #fff;
-  padding: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 14px;
   margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease;
+}
+.post-form:hover {
+  transform: translateY(-3px);
 }
 
 .post-form textarea {
   resize: vertical;
   min-height: 60px;
   margin-bottom: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  padding: 8px;
-}
-
-.post-form input[type="file"] {
-  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
 }
 
 .post-form button {
-  background: #007bff; /* blue button */
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
   color: #fff;
   font-weight: bold;
   border: none;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 10px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: opacity 0.3s;
 }
-
 .post-form button:hover {
-  background: #0056b3;
+  opacity: 0.85;
 }
 
+/* Post Card */
 .post {
   background: #fff;
-  padding: 12px;
+  padding: 14px;
   margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+.post:hover {
+  transform: translateY(-4px);
 }
 
 .post-header {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
-
 .user-avatar {
   border-radius: 50%;
   margin-right: 12px;
+  border: 2px solid #dd2a7b;
 }
-
 .username {
   font-weight: bold;
   color: #333;
 }
-
 .timestamp {
   font-size: 0.8em;
   color: #888;
@@ -86,125 +99,74 @@ h1 {
 
 .post-image {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 10px;
+  border-radius: 14px;
+  margin-bottom: 12px;
   object-fit: cover;
 }
 
+/* Post Actions */
 .post-actions {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
-
 .post-actions button {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1em;
-  color: #007bff;
+  font-size: 1.3em;
+  margin-right: 12px;
+  color: #444;
+  transition: transform 0.2s, color 0.2s;
 }
-
 .post-actions button:hover {
-  text-decoration: underline;
+  transform: scale(1.2);
+  color: #dd2a7b;
 }
 
+/* Captions & Comments */
 .caption {
   margin-bottom: 10px;
   color: #333;
 }
-
 .comments .comment {
   font-size: 0.9em;
   padding: 2px 0;
   color: #555;
 }
 
+/* Comment Form */
 .comment-form {
   display: flex;
-  gap: 5px;
+  gap: 8px;
 }
-
 .comment-form input {
   flex: 1;
-  padding: 6px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }
-
 .comment-form button {
-  padding: 6px 12px;
+  padding: 8px 14px;
   border: none;
-  background: #28a745; /* green button */
+  background: #28a745;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background 0.3s;
 }
-
 .comment-form button:hover {
   background: #1e7e34;
 }
 
-@media (max-width: 600px) {
-  .app {
-    padding: 5px;
-  }
-}
-/* Login page */
-.login-page {
-  width: 100%;
-  max-width: 400px;
-  margin-top: 50px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.login-page h1 {
-  margin-bottom: 20px;
-  color: #262626;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.login-form input {
-  padding: 10px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  border: 1px solid #dbdbdb;
-}
-
-.login-form button {
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.login-form button:hover {
-  transform: scale(1.05);
-}
-/* Navbar (Instagram-style, dark mode) */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-around;
-  background: #1e1e2f; /* dark background */
-  padding: 12px;
-  border-radius: 12px;
-  margin: 15px 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background: #1e1e2f;
+  padding: 14px;
+  border-radius: 14px;
+  margin: 20px 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
-
 .navbar button {
   background: none;
   border: none;
@@ -213,38 +175,78 @@ h1 {
   color: #bbb;
   transition: all 0.3s ease;
 }
-
 .navbar button:hover {
-  color: #6c63ff; /* purple hover */
-  transform: scale(1.1);
+  color: #dd2a7b;
+  transform: scale(1.2);
 }
-
-/* Active tab button (add in JSX with conditional class) */
 .navbar button.active {
-  color: #6c63ff;
+  color: #dd2a7b;
   font-weight: bold;
 }
 
-/* Main content area */
-.content {
-  margin-top: 20px;
-  padding: 15px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* Login Page */
+.login-page {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 60px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-page h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515BD4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.login-form input {
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+}
+.login-form button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.login-form button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
-/* Logout button in settings */
+/* Logout */
 .logout-btn {
-  background: #6c63ff;
+  background: linear-gradient(45deg, #6c63ff, #3a2fc9);
   color: white;
   padding: 10px 18px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: opacity 0.3s;
 }
 .logout-btn:hover {
-  background: #5548d9;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 8px;
+  }
 }
